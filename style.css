@@ -1,0 +1,86 @@
+body {
+	background-color: #a6adc8;
+}
+
+.container{
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+}
+
+.score{
+	display: flex;
+	background-color: #cdd6f4;
+	flex-direction: row;
+}
+
+.play{
+	display: flex;
+	flex-direction: row;
+}
+
+/* heading css */
+div.heading{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	border-style: solid;
+	border-width: 3px;
+	box-shadow: 2.5px 5px;
+	background-color: #cdd6f4;
+	border-color: black;
+}
+div.iconset {
+	display: flex;
+	flex-direction: row;
+}
+div.iconset img {
+	padding-top: 8px;
+	height: 100px;
+	width: 100px;
+}
+div.heading p{
+	font-size: 38px;
+	color: #11111b;
+}
+
+/*score css*/
+div.score {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-style: solid;
+	padding: 5px;
+	border-width: 3px;
+	box-shadow: 2px 4px;
+}
+div.humanscore{
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+}
+div.computerscore{
+	display: flex;
+	gap: 5px;
+	flex-direction: row;
+}
+div.score p {
+	font-size: 18px;
+}
+
+/* play */
+div.play {
+	display: flex;
+	flex-direction: row;
+}
+div.human {
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+div.human img {
+	height: 160px;
+	width: 160px;
+}
+

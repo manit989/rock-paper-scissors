@@ -1,6 +1,86 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const humanScoreDiv = document.querySelector(".humanscore");
+const computerScoreDiv = document.querySelector(".computerscore");
+const humanScorePara = document.createElement("p");
+const computerScorePara = document.createElement("p");
+
+humanScorePara.id = "humanScoreParaID";
+computerScorePara.id = "computerScoreParaID";
+
+humanScorePara.textContent = humanScore;
+computerScorePara.textContent = computerScore;
+
+humanScoreDiv.appendChild(humanScorePara);
+computerScoreDiv.appendChild(computerScorePara);
+
+const rockButton = document.querySelector(".rock");
+const paperButton = document.querySelector(".paper");
+const scissorsButton = document.querySelector(".scissors");
+
+rockButton.addEventListener("click", ()=> {
+	playRound(humanChoice="rock", computerChoice=getComputerChoice());
+	humanScorePara.textContent = humanScore;
+	computerScorePara.textContent = computerScore;
+	if (humanScore>=5){
+		alert("you won");
+		humanScore = 0;
+		computerScore = 0;
+		humanScorePara.textContent = humanScore;
+		computerScorePara.textContent = computerScore;
+	}
+	else if (computerScore>=5){
+		alert("you lose");
+		humanScore = 0;
+		computerScore = 0;
+		humanScorePara.textContent = humanScore;
+		computerScorePara.textContent = computerScore;
+	}
+});
+
+paperButton.addEventListener("click", ()=> {
+	playRound(humanChoice="paper", computerChoice=getComputerChoice());
+	humanScorePara.textContent = humanScore;
+	computerScorePara.textContent = computerScore;
+	if (humanScore>=5){
+		alert("you won");
+		humanScore = 0;
+		computerScore = 0;
+		humanScorePara.textContent = humanScore;
+		computerScorePara.textContent = computerScore;
+	}
+	else if (computerScore>=5){
+		alert("you lose");
+		humanScore = 0;
+		computerScore = 0;
+		humanScorePara.textContent = humanScore;
+		computerScorePara.textContent = computerScore;
+	}
+	
+});
+
+scissorsButton.addEventListener("click", ()=> {
+	playRound(humanChoice="scissors", computerChoice=getComputerChoice());
+	humanScorePara.textContent = humanScore;
+	computerScorePara.textContent = computerScore;
+	if (humanScore>=5){
+		alert("you won");
+		humanScore = 0;
+		computerScore = 0;
+		humanScorePara.textContent = humanScore;
+		computerScorePara.textContent = computerScore;
+	}
+	else if (computerScore>=5){
+		alert("you lose");
+		humanScore = 0;
+		computerScore = 0;
+		humanScorePara.textContent = humanScore;
+		computerScorePara.textContent = computerScore;
+	}
+	
+});
+
 function getComputerChoice(){
 	let n = Math.floor(Math.random()*3);
 	if (n===0){
@@ -16,6 +96,10 @@ function getComputerChoice(){
 
 function getHumanChoice(){
 	return prompt("Enter your choice");
+}
+
+function updatescore(){
+	return 0;
 }
 
 function playRound(humanChoice=prompt("Enter your choice"), computerChoice=getComputerChoice()){

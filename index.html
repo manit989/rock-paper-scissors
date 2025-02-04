@@ -3,9 +3,42 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="style.css">
 		<title>Rock Paper Scissors</title>
 	</head>
 	<body>
-		<script src="script.js"></script>
+		<div class="container">
+			<div class="heading">
+				<div class="iconset">
+					<img src="imgs/rock.svg">
+					<img src="imgs/paper.svg">
+					<img src="imgs/scissors.svg">
+				</div>
+				<p>Rock Paper Scissors</p>
+				<div class="iconset">
+					<img src="imgs/rock.svg">
+					<img src="imgs/paper.svg">
+					<img src="imgs/scissors.svg">
+				</div>
+			</div>
+			<div class="score">
+				<div class="humanscore">
+					<p>Your Score: </p>
+				</div>
+				<div class="computerscore">
+					<p>Computer Score: </p>
+				</div>
+			</div>
+			<div class="play">
+				<div class="human">
+					<button class="rock"><img src="imgs/rock.svg"></button>
+					<button class="paper"><img src="imgs/paper.svg"></button>
+					<button class="scissors"><img src="imgs/scissors.svg"></button>
+				</div>
+				<div class="computer"></div>
+			</div>
+		</div>
+		<script src="script.js" defer></script>
 	</body>
 </html>
